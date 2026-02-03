@@ -12,9 +12,41 @@ class Node{
     } 
     
 };
+
+
+void insertAtEnd(Node* &head,int val){
+
+    Node* node =new Node(val);
+
+    if(head==NULL){
+        head=node;
+        return;
+    }
+
+    Node* temp=head;
+
+    while(temp->next!=NULL){
+        temp=temp->next;
+    }
+
+    temp->next=node;
+}
+
+void insertAtBegin(Node* &head,int val){
+    
+    Node* node=new Node(val);
+
+    if(head==NULL){
+        head=node;
+        return;
+    }
+
+    node->next=head;
+    head=node;
+
+}
 int main(){
-    Node* n1=new Node(1);
-    Node* n2=new Node(2);
-
-
+    Node* head=NULL;
+    insertAtEnd(head,1);
+    return 0;
 }
