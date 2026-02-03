@@ -45,6 +45,8 @@ void insertAtBegin(Node* &head,int val){
     head=node;
 
 }
+
+
 int main(){
     Node* head=NULL;
     insertAtEnd(head,1);
